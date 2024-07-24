@@ -1,9 +1,28 @@
 <div>
-    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+    <input class="form-control" type="text" placeholder="First Name" [(ngModel)] ="employeeobj.firstName" aria-label="default input example">
 </div>
-<div class="mt-1">
-    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+<div class="mt-2">
+    <input class="form-control" type="text" placeholder="Last Name" [(ngModel)] ="employeeobj.lastName" aria-label="default input example">
 </div>
-<div>
-
+<div class="mt-2">
+    <input class="form-control" type="text" placeholder="Email" [(ngModel)] ="employeeobj.email"aria-label="default input example">
+</div>
+<div class="mt-2">
+    <select class="form-select" [(ngModel)] ="employeeobj.departmentId" aria-label="Default select example">
+        <option selected>Department</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+</div>
+<div class="mt-2">
+    <select class="form-select" aria-label="Default select example" [(ngModel)] ="employeeobj.roleId">
+        <option selected>Role</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+</div>
+<div class="mt-2">
+    <button type="button" class="btn btn-success" (click)="addEmployee()">Add Employee</button>
 </div>
