@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -18,7 +18,15 @@ export class ManageEmpComponent {
     departmentId:"",
     roleId:""
   }
+  constructor(private http:HttpClient){}
   addEmployee(){
     console.log(this.employeeobj);
+    
+    this.http.post("http://localhost:8080/emp-controller/employee",this.employeeobj).subscribe(
+      (data)=>{
+        console.log(data);
+        
+      }
+    )
   }
 }
