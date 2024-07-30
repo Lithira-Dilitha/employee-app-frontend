@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { identifierName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { first } from 'rxjs';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -70,5 +72,18 @@ public employeeList:any;
         console.log(res);
       }
     )
+  }
+  public employeeObj ={
+    id:"",
+    firstName:"",
+    lastName:"",
+    email:"",
+    departmentId:"",
+    roleId:""
+  }
+  updateEmployee(employee:any){
+    this.employeeObj = employee;
+    console.log(employee);
+    
   }
 }
