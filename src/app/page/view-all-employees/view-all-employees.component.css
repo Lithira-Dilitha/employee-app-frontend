@@ -1,0 +1,14 @@
+#btn-delete{
+    background-color: #e74c3c;
+    padding: 10px;
+}
+#btn-update{
+    background-color: #2980b9;
+    padding: 10px;
+}
+#btn-delete:hover{
+    background-color: #a14238;
+}
+#btn-update:hover{
+    background-color: #22608a;
+}

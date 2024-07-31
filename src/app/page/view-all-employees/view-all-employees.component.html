@@ -17,8 +17,8 @@
         <td>{{employee.email}}</td>
         <td>{{employee.departmentId}}</td>
         <td>{{employee.roleId}}</td>
-        <td><button type="button" class="btn " (click)="deleteEmployee(employee)"><i class="bi bi-trash-fill"></i></button></td>
-        <td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateEmployee(employee)"><i class="bi bi-pencil-square"></i></button></td>
+        <td><button type="button" class="btn " (click)="deleteEmployee(employee)" id="btn-delete"><i class="bi bi-trash-fill" style="color: white;"></i></button></td>
+        <td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateEmployee(employee)" id="btn-update"><i class="bi bi-pencil-square" style="color: white;"></i></button></td>
     </tr>
 </table>
 
@@ -57,7 +57,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-primary" (click)="saveUpdatedEmployee()">Update</button>
       </div>
     </div>
   </div>
